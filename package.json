@@ -1,0 +1,19 @@
+{
+  "name": "cinetpay-node-sdk",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "author": "iammaham",
+  "homepage": "https://github.com/iamMAHAM/cinetpay-node",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
