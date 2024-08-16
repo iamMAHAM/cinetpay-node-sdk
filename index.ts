@@ -2,7 +2,7 @@ import Cinetpay from './lib/cinetpay';
 
 export { generateTransactionId } from './lib/utils';
 
-export {
+export type {
   CheckTransactionResponse,
   InitiatePaymentResponse,
   NotifyUrlResponse,

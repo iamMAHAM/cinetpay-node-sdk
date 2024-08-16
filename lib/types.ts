@@ -36,8 +36,8 @@ export type PaymentData = (
   notify_url: string;
   return_url: string;
   lang?: 'fr' | 'en';
-  metadata?: Record<string, any>;
-  invoice_data?: Record<string, any>;
+  metadata?: Record<string, unknown>;
+  invoice_data?: Record<string, unknown>;
   lock_phone_number?: boolean;
 };
 
@@ -64,7 +64,7 @@ export type CheckTransactionResponse = Omit<Common, 'description'> & {
     status: 'ACCEPTED' | 'PENDING' | 'REFUSED';
     payment_method: string;
     description: string;
-    metadata: Record<string, any> | null;
+    metadata: Record<string, unknown> | null;
     operator_id: string | null;
     payment_date: string;
     fund_availability_date: string;

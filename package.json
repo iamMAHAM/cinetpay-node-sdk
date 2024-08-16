@@ -1,19 +1,50 @@
 {
   "name": "cinetpay-node-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "keywords": [
+    "cinetpay",
+    "cinetpay-node-sdk",
+    "cinetpay-node",
+    "cinetpay-nodejs",
+    "cinetpay-nodejs-sdk",
+    "cinetpay-server"
+  ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "format:apply": "biome check --apply .",
+    "format:check": "biome format .",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "prepublishOnly": "npm run build"
   },
   "author": "iammaham",
-  "homepage": "https://github.com/iamMAHAM/cinetpay-node",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamMAHAM/cinetpay-node-sdk"
+  },
+  "homepage": "https://github.com/iamMAHAM/cinetpay-node-sdk#readme",
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/node": "^22.3.0",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
-  }
+  },
+  "packageManager": "pnpm@9.7.0"
 }
